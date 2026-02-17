@@ -28,6 +28,10 @@ python -m unified_semantic_archiver cursor-research --db ./continuum.db --output
 python -m unified_semantic_archiver.cli.query_db --db ./continuum.db --table library_documents
 ```
 
+## Tests
+
+Run: `pytest tests/` (requires `pip install -e ".[dev]"` or `pip install pytest`). Smoke tests cover `library_document_insert` and `library_document_search` with tenant scoping.
+
 ## Continuum app
 
 The **continuum** repository uses this package and provides the library server (upload, search, map). Install continuum and run its server; it depends on `unified-semantic-compressor`.
@@ -35,6 +39,10 @@ The **continuum** repository uses this package and provides the library server (
 ## Schema ownership
 
 Continuum tables (including `library_documents`) live in USC. The **continuum** app has no separate schema; it uses `ContinuumDb` and this schema. See [unified_semantic_archiver/db/SCHEMA_OWNERSHIP.md](unified_semantic_archiver/db/SCHEMA_OWNERSHIP.md) for how to evolve the schema and handle migrations.
+
+## Full video pipeline
+
+The video compressor uses **video_storage_tool** for the full pipeline (describe, diff, script-to-video). That package is not part of USC; it currently lives in **Drawer 2** (`Scripts/video_storage_tool/`). Without it, the video compressor runs a stub. See [docs/VIDEO_PIPELINE.md](docs/VIDEO_PIPELINE.md).
 
 ## Structure
 
