@@ -1,0 +1,3 @@
+# Unified Semantic Archiver
+luigi>=3.7.0
+flask>=3.0.0

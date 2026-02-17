@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unified-semantic-compressor"
+version = "0.1.0"
+description = "Flowering ring of semantic compressors (video, audio, library, data) with continuum DB, ETL, and research feed"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "luigi>=3.7.0",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["unified_semantic_archiver*"]
