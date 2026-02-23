@@ -93,6 +93,110 @@ CREATE INDEX IF NOT EXISTS idx_library_documents_geohash ON library_documents(ge
 CREATE INDEX IF NOT EXISTS idx_library_documents_owner ON library_documents(owner_id);
 CREATE INDEX IF NOT EXISTS idx_library_documents_tenant_id ON library_documents(tenant_id);
 
+-- Astral bodies catalog (planets, moons, stars, barycenters)
+CREATE TABLE IF NOT EXISTS astral_body_catalog (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    body_id TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    kind TEXT NOT NULL CHECK (kind IN ('planet','moon','star','barycenter')),
+    mass_kg REAL,
+    radius_m REAL,
+    parent_body_id TEXT,
+    frame_id TEXT,
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_astral_body_tenant ON astral_body_catalog(tenant_id);
+CREATE INDEX IF NOT EXISTS idx_astral_body_parent ON astral_body_catalog(parent_body_id);
+CREATE INDEX IF NOT EXISTS idx_astral_body_kind ON astral_body_catalog(kind);
+
+-- Observer sites (lat/lon/altitude on a body)
+CREATE TABLE IF NOT EXISTS astral_observer_sites (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    site_id TEXT NOT NULL UNIQUE,
+    body_id TEXT NOT NULL,
+    lat_deg REAL NOT NULL,
+    lon_deg REAL NOT NULL,
+    altitude_m REAL DEFAULT 0,
+    reference_frame TEXT,
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_astral_observer_tenant ON astral_observer_sites(tenant_id);
+CREATE INDEX IF NOT EXISTS idx_astral_observer_body ON astral_observer_sites(body_id);
+
+-- NASA kernel / flat-file registry
+CREATE TABLE IF NOT EXISTS nasa_file_registry (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    file_type TEXT NOT NULL CHECK (file_type IN ('spk','pck','lsk','fk','horizons')),
+    source_url TEXT,
+    local_path TEXT NOT NULL,
+    checksum TEXT,
+    valid_from TEXT,
+    valid_to TEXT,
+    format_version TEXT,
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_nasa_file_tenant ON nasa_file_registry(tenant_id);
+CREATE INDEX IF NOT EXISTS idx_nasa_file_type ON nasa_file_registry(file_type);
+
+-- Ephemeris samples (ingested position/velocity per body per epoch)
+CREATE TABLE IF NOT EXISTS ephemeris_samples (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    body_id TEXT NOT NULL,
+    epoch_utc TEXT NOT NULL,
+    position_x REAL NOT NULL,
+    position_y REAL NOT NULL,
+    position_z REAL NOT NULL,
+    velocity_x REAL,
+    velocity_y REAL,
+    velocity_z REAL,
+    frame_id TEXT,
+    source_file_id INTEGER REFERENCES nasa_file_registry(id),
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    created_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_ephemeris_body ON ephemeris_samples(body_id);
+CREATE INDEX IF NOT EXISTS idx_ephemeris_epoch ON ephemeris_samples(epoch_utc);
+CREATE INDEX IF NOT EXISTS idx_ephemeris_tenant ON ephemeris_samples(tenant_id);
+
+-- Occlusion / eclipse events
+CREATE TABLE IF NOT EXISTS occlusion_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    epoch_utc TEXT NOT NULL,
+    source_body_id TEXT NOT NULL,
+    target_body_id TEXT NOT NULL,
+    occluder_body_id TEXT NOT NULL,
+    occlusion_ratio REAL,
+    eclipse_type TEXT CHECK (eclipse_type IN ('partial','annular','total','planet_occludes_planet','planet_occludes_star')),
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    created_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_occlusion_epoch ON occlusion_events(epoch_utc);
+CREATE INDEX IF NOT EXISTS idx_occlusion_tenant ON occlusion_events(tenant_id);
+
+-- Ingestion job tracking
+CREATE TABLE IF NOT EXISTS ingestion_jobs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    job_type TEXT NOT NULL,
+    source TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending','running','completed','failed')),
+    payload_json TEXT,
+    started_at TEXT,
+    finished_at TEXT,
+    error_text TEXT,
+    attempt_count INTEGER DEFAULT 0,
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_ingestion_jobs_status ON ingestion_jobs(status);
+CREATE INDEX IF NOT EXISTS idx_ingestion_jobs_tenant ON ingestion_jobs(tenant_id);
+
 -- Indexes for common queries
 CREATE INDEX IF NOT EXISTS idx_spatial_4d_payload ON spatial_4d(payload_type, payload_id);
 CREATE INDEX IF NOT EXISTS idx_semantic_chunks_media ON semantic_chunks(media_type);

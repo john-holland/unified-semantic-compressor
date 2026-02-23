@@ -346,6 +346,353 @@ class ContinuumDb:
 
         return rows[:limit]
 
+    # --- astral_body_catalog ---
+    def astral_body_insert(
+        self,
+        body_id: str,
+        name: str,
+        kind: str,
+        mass_kg: float | None = None,
+        radius_m: float | None = None,
+        parent_body_id: str | None = None,
+        frame_id: str | None = None,
+        tenant_id: str = "default",
+    ) -> int:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO astral_body_catalog
+                   (body_id, name, kind, mass_kg, radius_m, parent_body_id, frame_id, tenant_id, updated_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))""",
+                (body_id, name, kind, mass_kg, radius_m, parent_body_id, frame_id, tenant),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def astral_body_get(self, body_id: str, tenant_id: str = "default") -> dict[str, Any] | None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                "SELECT * FROM astral_body_catalog WHERE body_id = ? AND tenant_id = ?",
+                (body_id, tenant),
+            ).fetchone()
+            return dict(row) if row else None
+
+    def astral_body_list(
+        self,
+        kind: str | None = None,
+        tenant_id: str = "default",
+        limit: int = 500,
+    ) -> list[dict[str, Any]]:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            if kind:
+                rows = c.execute(
+                    "SELECT * FROM astral_body_catalog WHERE tenant_id = ? AND kind = ? ORDER BY body_id LIMIT ?",
+                    (tenant, kind, limit),
+                ).fetchall()
+            else:
+                rows = c.execute(
+                    "SELECT * FROM astral_body_catalog WHERE tenant_id = ? ORDER BY body_id LIMIT ?",
+                    (tenant, limit),
+                ).fetchall()
+            return [dict(r) for r in rows]
+
+    # --- astral_observer_sites ---
+    def astral_observer_site_insert(
+        self,
+        site_id: str,
+        body_id: str,
+        lat_deg: float,
+        lon_deg: float,
+        altitude_m: float = 0,
+        reference_frame: str | None = None,
+        tenant_id: str = "default",
+    ) -> int:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO astral_observer_sites
+                   (site_id, body_id, lat_deg, lon_deg, altitude_m, reference_frame, tenant_id, updated_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))""",
+                (site_id, body_id, lat_deg, lon_deg, altitude_m, reference_frame, tenant),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def astral_observer_site_get(self, site_id: str, tenant_id: str = "default") -> dict[str, Any] | None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                "SELECT * FROM astral_observer_sites WHERE site_id = ? AND tenant_id = ?",
+                (site_id, tenant),
+            ).fetchone()
+            return dict(row) if row else None
+
+    def astral_observer_site_list(
+        self,
+        body_id: str | None = None,
+        tenant_id: str = "default",
+        limit: int = 200,
+    ) -> list[dict[str, Any]]:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            if body_id:
+                rows = c.execute(
+                    "SELECT * FROM astral_observer_sites WHERE tenant_id = ? AND body_id = ? ORDER BY site_id LIMIT ?",
+                    (tenant, body_id, limit),
+                ).fetchall()
+            else:
+                rows = c.execute(
+                    "SELECT * FROM astral_observer_sites WHERE tenant_id = ? ORDER BY site_id LIMIT ?",
+                    (tenant, limit),
+                ).fetchall()
+            return [dict(r) for r in rows]
+
+    # --- nasa_file_registry ---
+    def nasa_file_insert(
+        self,
+        file_type: str,
+        local_path: str,
+        source_url: str | None = None,
+        checksum: str | None = None,
+        valid_from: str | None = None,
+        valid_to: str | None = None,
+        format_version: str | None = None,
+        tenant_id: str = "default",
+    ) -> int:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO nasa_file_registry
+                   (file_type, source_url, local_path, checksum, valid_from, valid_to, format_version, tenant_id, updated_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))""",
+                (file_type, source_url, local_path, checksum, valid_from, valid_to, format_version, tenant),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def nasa_file_get(self, file_id: int, tenant_id: str = "default") -> dict[str, Any] | None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                "SELECT * FROM nasa_file_registry WHERE id = ? AND tenant_id = ?",
+                (file_id, tenant),
+            ).fetchone()
+            return dict(row) if row else None
+
+    def nasa_file_list(
+        self,
+        file_type: str | None = None,
+        tenant_id: str = "default",
+        limit: int = 200,
+    ) -> list[dict[str, Any]]:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            if file_type:
+                rows = c.execute(
+                    "SELECT * FROM nasa_file_registry WHERE tenant_id = ? AND file_type = ? ORDER BY id DESC LIMIT ?",
+                    (tenant, file_type, limit),
+                ).fetchall()
+            else:
+                rows = c.execute(
+                    "SELECT * FROM nasa_file_registry WHERE tenant_id = ? ORDER BY id DESC LIMIT ?",
+                    (tenant, limit),
+                ).fetchall()
+            return [dict(r) for r in rows]
+
+    # --- ephemeris_samples ---
+    def ephemeris_sample_insert(
+        self,
+        body_id: str,
+        epoch_utc: str,
+        position_x: float,
+        position_y: float,
+        position_z: float,
+        velocity_x: float | None = None,
+        velocity_y: float | None = None,
+        velocity_z: float | None = None,
+        frame_id: str | None = None,
+        source_file_id: int | None = None,
+        tenant_id: str = "default",
+    ) -> int:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO ephemeris_samples
+                   (body_id, epoch_utc, position_x, position_y, position_z, velocity_x, velocity_y, velocity_z,
+                    frame_id, source_file_id, tenant_id)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (body_id, epoch_utc, position_x, position_y, position_z, velocity_x, velocity_y, velocity_z,
+                 frame_id, source_file_id, tenant),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def ephemeris_sample_get(
+        self,
+        body_id: str,
+        epoch_utc: str,
+        tenant_id: str = "default",
+    ) -> dict[str, Any] | None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                """SELECT * FROM ephemeris_samples
+                   WHERE body_id = ? AND epoch_utc = ? AND tenant_id = ?
+                   ORDER BY id DESC LIMIT 1""",
+                (body_id, epoch_utc, tenant),
+            ).fetchone()
+            return dict(row) if row else None
+
+    def ephemeris_sample_list_near_epoch(
+        self,
+        body_id: str,
+        epoch_utc: str,
+        tenant_id: str = "default",
+        limit: int = 10,
+    ) -> list[dict[str, Any]]:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            rows = c.execute(
+                """SELECT * FROM ephemeris_samples
+                   WHERE body_id = ? AND tenant_id = ?
+                   ORDER BY ABS(julianday(epoch_utc) - julianday(?)) ASC
+                   LIMIT ?""",
+                (body_id, tenant, epoch_utc, limit),
+            ).fetchall()
+            return [dict(r) for r in rows]
+
+    # --- occlusion_events ---
+    def occlusion_event_insert(
+        self,
+        epoch_utc: str,
+        source_body_id: str,
+        target_body_id: str,
+        occluder_body_id: str,
+        occlusion_ratio: float | None = None,
+        eclipse_type: str | None = None,
+        tenant_id: str = "default",
+    ) -> int:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO occlusion_events
+                   (epoch_utc, source_body_id, target_body_id, occluder_body_id, occlusion_ratio, eclipse_type, tenant_id)
+                   VALUES (?, ?, ?, ?, ?, ?, ?)""",
+                (epoch_utc, source_body_id, target_body_id, occluder_body_id, occlusion_ratio, eclipse_type, tenant),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def occlusion_event_list(
+        self,
+        epoch_utc: str | None = None,
+        target_body_id: str | None = None,
+        tenant_id: str = "default",
+        limit: int = 200,
+    ) -> list[dict[str, Any]]:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            sql = "SELECT * FROM occlusion_events WHERE tenant_id = ?"
+            params: list[Any] = [tenant]
+            if epoch_utc:
+                sql += " AND epoch_utc = ?"
+                params.append(epoch_utc)
+            if target_body_id:
+                sql += " AND target_body_id = ?"
+                params.append(target_body_id)
+            sql += " ORDER BY id DESC LIMIT ?"
+            params.append(limit)
+            rows = c.execute(sql, params).fetchall()
+            return [dict(r) for r in rows]
+
+    # --- ingestion_jobs ---
+    def ingestion_job_insert(
+        self,
+        job_type: str,
+        source: str,
+        payload_json: str | dict | None = None,
+        status: str = "pending",
+        tenant_id: str = "default",
+    ) -> int:
+        tenant = (tenant_id or "").strip() or "default"
+        payload_str = json.dumps(payload_json) if isinstance(payload_json, dict) else payload_json
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO ingestion_jobs (job_type, source, status, payload_json, tenant_id, updated_at)
+                   VALUES (?, ?, ?, ?, ?, datetime('now'))""",
+                (job_type, source, status, payload_str, tenant),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def ingestion_job_start(self, job_id: int, tenant_id: str = "default") -> bool:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            cur = c.execute(
+                """UPDATE ingestion_jobs
+                   SET status = 'running', started_at = COALESCE(started_at, datetime('now')),
+                       attempt_count = attempt_count + 1, updated_at = datetime('now')
+                   WHERE id = ? AND tenant_id = ? AND status IN ('pending','failed')""",
+                (job_id, tenant),
+            )
+            c.commit()
+            return cur.rowcount > 0
+
+    def ingestion_job_complete(self, job_id: int, tenant_id: str = "default") -> None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            c.execute(
+                """UPDATE ingestion_jobs
+                   SET status = 'completed', finished_at = datetime('now'), error_text = NULL, updated_at = datetime('now')
+                   WHERE id = ? AND tenant_id = ?""",
+                (job_id, tenant),
+            )
+            c.commit()
+
+    def ingestion_job_fail(self, job_id: int, error_text: str, tenant_id: str = "default") -> None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            c.execute(
+                """UPDATE ingestion_jobs
+                   SET status = 'failed', finished_at = datetime('now'), error_text = ?, updated_at = datetime('now')
+                   WHERE id = ? AND tenant_id = ?""",
+                (error_text, job_id, tenant),
+            )
+            c.commit()
+
+    def ingestion_job_get(self, job_id: int, tenant_id: str = "default") -> dict[str, Any] | None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                "SELECT * FROM ingestion_jobs WHERE id = ? AND tenant_id = ?",
+                (job_id, tenant),
+            ).fetchone()
+            return dict(row) if row else None
+
+    def ingestion_job_list(
+        self,
+        status: str | None = None,
+        job_type: str | None = None,
+        tenant_id: str = "default",
+        limit: int = 100,
+    ) -> list[dict[str, Any]]:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            sql = "SELECT * FROM ingestion_jobs WHERE tenant_id = ?"
+            params: list[Any] = [tenant]
+            if status:
+                sql += " AND status = ?"
+                params.append(status)
+            if job_type:
+                sql += " AND job_type = ?"
+                params.append(job_type)
+            sql += " ORDER BY id DESC LIMIT ?"
+            params.append(limit)
+            rows = c.execute(sql, params).fetchall()
+            return [dict(r) for r in rows]
+
     # --- raw SQL for explorer window ---
     def execute_read(self, sql: str, params: tuple[Any, ...] = ()) -> list[dict[str, Any]]:
         """Run read-only SQL; returns list of row dicts."""
