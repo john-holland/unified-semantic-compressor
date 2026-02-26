@@ -10,6 +10,8 @@ import sys
 from pathlib import Path
 from typing import Callable
 
+from unified_semantic_archiver.media.minimization import MinimizationContext, run_minimization
+
 log = logging.getLogger("unified_semantic_archiver.video_compressor")
 
 # Add video_storage_tool to path
@@ -97,12 +99,26 @@ def video_compress(
         out_dir,
         enabled=True,
         quality=config.get("diff", {}).get("quality", 6),
+        lossless=config.get("diff", {}).get("lossless", False),
         ffmpeg_path=config.get("audio", {}).get("ffmpeg_path"),
     )
 
-    # Step 5: minimize (stub: identify unique chunks from high-residual regions)
+    # Step 5: minimize via ETL adapters (feature-gated)
     cb("minimizing", 0.85, "Minimizing toward unique chunks…")
-    unique_refs = _minimize_stub(out_dir, script_path, grid_size)
+    mini = run_minimization(
+        MinimizationContext(
+            video_path=video_path,
+            resultant_path=resultant_path,
+            diff_path=Path(diff_path) if diff_path else None,
+            script_path=script_path,
+            out_dir=out_dir,
+            grid_size=grid_size,
+            config=config,
+            source="compressor",
+            video_style_description=str(config.get("script", {}).get("video_style_description", "")),
+        )
+    )
+    unique_refs = mini.unique_chunk_refs
 
     # Step 6: store in continuum DB
     if db_path:
@@ -115,12 +131,6 @@ def video_compress(
         "diff_path": str(diff_path) if diff_path else None,
         "unique_chunk_refs": unique_refs,
     }
-
-
-def _minimize_stub(out_dir: Path, script_path: Path, grid_size: int) -> list[str]:
-    """Stub: return empty list; real impl would regress description toward unique chunks."""
-    return []
-
 
 def _store_to_db(
     db_path: Path,
