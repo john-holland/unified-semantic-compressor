@@ -42,7 +42,17 @@ Continuum tables (including `library_documents`) live in USC. The **continuum** 
 
 ## Full video pipeline
 
-The video compressor uses **video_storage_tool** for the full pipeline (describe, diff, script-to-video). That package is not part of USC; it currently lives in **Drawer 2** (`Scripts/video_storage_tool/`). Without it, the video compressor runs a stub. See [docs/VIDEO_PIPELINE.md](docs/VIDEO_PIPELINE.md).
+USC now exposes media parity primitives via `unified_semantic_archiver.media.UscMediaService` (store/reconstitute/diff/stream/settings/cache/T2V download surface). The implementation currently wraps `video_storage_tool` runtime components where applicable while providing a stable USC callable contract for Continuum. See [docs/VIDEO_PIPELINE.md](docs/VIDEO_PIPELINE.md).
+
+Minimization now uses an ETL adapter pattern (`extract -> tokenize -> bucket -> score -> select -> persist`) and can be enabled/configured through `minimization.*` media settings. Adapter cohorts include `default`, `cairn_audio_v1`, `cairn_residual_v1`, `planar_hyperplane_v1`, and `audio_captioning_v1`, with JSON-first model loading and optional sklearn/joblib support.
+
+V2 introduces per-adapter requirement contracts and runtime fallback routing, plus transcript/audio-captioning policies for stronger speech + SFX coverage.
+
+## Entropy Policy References
+
+USC remains the primary home for semantic/validation architecture. The current operational compliance gate for entropy claim wording and live probe evidence is documented in:
+
+- [docs/ENTROPY_POLICY_LINKS.md](docs/ENTROPY_POLICY_LINKS.md)
 
 ## Structure
 
