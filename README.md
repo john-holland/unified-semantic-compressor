@@ -26,7 +26,33 @@ python -m unified_semantic_archiver cursor-research --db ./continuum.db --output
 
 # Query DB (e.g. for Unity Explorer)
 python -m unified_semantic_archiver.cli.query_db --db ./continuum.db --table library_documents
+
+# If ModuleNotFoundError: run from repo root, or use the standalone script:
+python scripts/query_db.py --db ./continuum.db --table library_documents
+# Or: set PYTHONPATH=%CD% (Windows) / PYTHONPATH=$(pwd) (Unix), then run the -m form.
 ```
+
+## Troubleshooting: ModuleNotFoundError for unified_semantic_archiver
+
+If `python -m unified_semantic_archiver.cli.query_db` fails with `ModuleNotFoundError: No module named 'unified_semantic_archiver'`:
+
+1. **Run from the USC repo root** so the current directory is on `sys.path`:
+   ```bash
+   cd C:/Users/John/unified-semantic-compressor
+   python -m unified_semantic_archiver.cli.query_db --db continuum.db --table library_documents
+   ```
+
+2. **Use the standalone script** (works from any directory):
+   ```bash
+   python C:/Users/John/unified-semantic-compressor/scripts/query_db.py --db C:/Users/John/unified-semantic-compressor/continuum.db --table library_documents
+   ```
+
+3. **Set PYTHONPATH** and run the module:
+   ```bash
+   # Windows PowerShell
+   $env:PYTHONPATH = "C:\Users\John\unified-semantic-compressor"
+   python -m unified_semantic_archiver.cli.query_db --db continuum.db --table library_documents
+   ```
 
 ## Tests
 
@@ -53,6 +79,10 @@ V2 introduces per-adapter requirement contracts and runtime fallback routing, pl
 USC remains the primary home for semantic/validation architecture. The current operational compliance gate for entropy claim wording and live probe evidence is documented in:
 
 - [docs/ENTROPY_POLICY_LINKS.md](docs/ENTROPY_POLICY_LINKS.md)
+
+## Physics cards and topological searches
+
+**Physics cards** describe physical or simulation constraints and parameters (e.g. units, dimensions, invariants) for entities in the continuum. **Topological searches** traverse and query the graph of relationships (e.g. document → location → type, or dependency order) rather than flat keyword/vector search; they support ordering by dependency, reachability, and structure.
 
 ## Structure
 

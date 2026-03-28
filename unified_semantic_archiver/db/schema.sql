@@ -203,3 +203,46 @@ CREATE INDEX IF NOT EXISTS idx_semantic_chunks_media ON semantic_chunks(media_ty
 CREATE INDEX IF NOT EXISTS idx_semantic_chunks_parent ON semantic_chunks(parent_id);
 CREATE INDEX IF NOT EXISTS idx_unique_kernels_status ON unique_kernels(status);
 CREATE INDEX IF NOT EXISTS idx_unique_kernels_chunk ON unique_kernels(chunk_id);
+
+-- Entropy ring (Entropythief daisy topology)
+CREATE TABLE IF NOT EXISTS entropy_ring_nodes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    node_id TEXT NOT NULL UNIQUE,
+    probe_target TEXT NOT NULL,
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active','mezzed','removed')),
+    created_at TEXT DEFAULT (datetime('now')),
+    mezzed_at TEXT,
+    last_seen TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_entropy_ring_nodes_status ON entropy_ring_nodes(status);
+CREATE INDEX IF NOT EXISTS idx_entropy_ring_nodes_tenant ON entropy_ring_nodes(tenant_id);
+
+CREATE TABLE IF NOT EXISTS entropy_ring_warehouse (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    node_id TEXT NOT NULL,
+    probe_target TEXT NOT NULL,
+    tenant_id TEXT NOT NULL DEFAULT 'default',
+    retry_count INTEGER DEFAULT 0,
+    last_retry TEXT,
+    created_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_entropy_warehouse_tenant ON entropy_ring_warehouse(tenant_id);
+
+CREATE TABLE IF NOT EXISTS entropy_node_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    event TEXT NOT NULL CHECK (event IN ('added','removed','mezzed','refreshed')),
+    node_id TEXT NOT NULL,
+    ts TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_entropy_node_events_node ON entropy_node_events(node_id);
+CREATE INDEX IF NOT EXISTS idx_entropy_node_events_ts ON entropy_node_events(ts);
+
+CREATE TABLE IF NOT EXISTS entropy_credits (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tenant_id TEXT NOT NULL UNIQUE,
+    earned INTEGER NOT NULL DEFAULT 0,
+    spent INTEGER NOT NULL DEFAULT 0,
+    last_updated TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_entropy_credits_tenant ON entropy_credits(tenant_id);

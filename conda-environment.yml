@@ -1,0 +1,21 @@
+# USC (unified_semantic_archiver) — core + video pipeline.
+# Python 3.12 for torch/diffusers compatibility (3.14 can crash).
+# Install: conda env create -f conda-environment.yml
+# Activate: conda activate usc
+name: usc
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - -e .
+    - pytest>=7.0.0
+    # Video pipeline (BLIP, CogVideoX)
+    - torch
+    - torchvision
+    - diffusers
+    - transformers
+    - Pillow

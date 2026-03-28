@@ -1,1 +1,18 @@
-Binary/unknown: len=1469, sha256=7d4534898c3e951e
+[Preface]
+the visual style of this scene is a bit of the game
+
+[Transcript]
+[Script placeholder for: Flight log.mp4. Install openai-whisper and use --script-backend whisper for transcription.]
+
+[Visual description]
+0.0s: a room with a tv and a bunch of icons
+1.5s: a room with a tv and a bunch of stickers
+3.0s: a room with a large screen and a tv
+4.5s: a room with a large screen and a tv
+
+[Color gradient]
+0.0s: top=#948f8a mid=#908980 bottom=#936c52
+1.5s: top=#938d8b mid=#948a85 bottom=#946d53
+3.0s: top=#aba6a9 mid=#bbb1b4 bottom=#956e54
+4.5s: top=#aba5a8 mid=#bbb1b3 bottom=#976f54
+avg: top=#9f9a9a mid=#a69d9b bottom=#956e53

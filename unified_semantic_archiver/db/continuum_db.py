@@ -693,6 +693,186 @@ class ContinuumDb:
             rows = c.execute(sql, params).fetchall()
             return [dict(r) for r in rows]
 
+    # --- entropy_ring_nodes ---
+    def entropy_ring_node_insert(
+        self,
+        node_id: str,
+        probe_target: str,
+        tenant_id: str = "default",
+        status: str = "active",
+    ) -> int:
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO entropy_ring_nodes (node_id, probe_target, tenant_id, status)
+                   VALUES (?, ?, ?, ?)""",
+                (node_id, probe_target, tenant_id or "default", status),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def entropy_ring_node_get(self, node_id: str) -> dict[str, Any] | None:
+        with self._conn() as c:
+            row = c.execute("SELECT * FROM entropy_ring_nodes WHERE node_id = ?", (node_id,)).fetchone()
+            return dict(row) if row else None
+
+    def entropy_ring_node_update_status(
+        self,
+        node_id: str,
+        status: str,
+        mezzed_at: str | None = None,
+        last_seen: str | None = None,
+    ) -> None:
+        with self._conn() as c:
+            if mezzed_at is not None or last_seen is not None:
+                updates = ["status = ?"]
+                params: list[Any] = [status]
+                if mezzed_at is not None:
+                    updates.append("mezzed_at = ?")
+                    params.append(mezzed_at)
+                if last_seen is not None:
+                    updates.append("last_seen = ?")
+                    params.append(last_seen)
+                params.append(node_id)
+                c.execute(
+                    f"UPDATE entropy_ring_nodes SET {', '.join(updates)} WHERE node_id = ?",
+                    params,
+                )
+            else:
+                c.execute(
+                    "UPDATE entropy_ring_nodes SET status = ? WHERE node_id = ?",
+                    (status, node_id),
+                )
+            c.commit()
+
+    def entropy_ring_node_list(
+        self,
+        status: str | None = None,
+        tenant_id: str | None = None,
+    ) -> list[dict[str, Any]]:
+        with self._conn() as c:
+            sql = "SELECT * FROM entropy_ring_nodes WHERE 1=1"
+            params: list[Any] = []
+            if status:
+                sql += " AND status = ?"
+                params.append(status)
+            if tenant_id:
+                sql += " AND tenant_id = ?"
+                params.append(tenant_id)
+            sql += " ORDER BY id"
+            rows = c.execute(sql, params).fetchall()
+            return [dict(r) for r in rows]
+
+    def entropy_ring_node_delete(self, node_id: str) -> None:
+        with self._conn() as c:
+            c.execute("DELETE FROM entropy_ring_nodes WHERE node_id = ?", (node_id,))
+            c.commit()
+
+    # --- entropy_ring_warehouse ---
+    def entropy_warehouse_insert(
+        self,
+        node_id: str,
+        probe_target: str,
+        tenant_id: str = "default",
+    ) -> int:
+        with self._conn() as c:
+            cur = c.execute(
+                """INSERT INTO entropy_ring_warehouse (node_id, probe_target, tenant_id)
+                   VALUES (?, ?, ?)""",
+                (node_id, probe_target, tenant_id or "default"),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    def entropy_warehouse_update_retry(self, node_id: str) -> None:
+        with self._conn() as c:
+            c.execute(
+                """UPDATE entropy_ring_warehouse
+                   SET retry_count = retry_count + 1, last_retry = datetime('now')
+                   WHERE node_id = ?""",
+                (node_id,),
+            )
+            c.commit()
+
+    def entropy_warehouse_list(self, tenant_id: str | None = None) -> list[dict[str, Any]]:
+        with self._conn() as c:
+            if tenant_id:
+                rows = c.execute(
+                    "SELECT * FROM entropy_ring_warehouse WHERE tenant_id = ? ORDER BY id",
+                    (tenant_id,),
+                ).fetchall()
+            else:
+                rows = c.execute("SELECT * FROM entropy_ring_warehouse ORDER BY id").fetchall()
+            return [dict(r) for r in rows]
+
+    def entropy_warehouse_delete(self, node_id: str) -> None:
+        with self._conn() as c:
+            c.execute("DELETE FROM entropy_ring_warehouse WHERE node_id = ?", (node_id,))
+            c.commit()
+
+    # --- entropy_node_events ---
+    def entropy_event_insert(self, event: str, node_id: str) -> int:
+        with self._conn() as c:
+            cur = c.execute(
+                "INSERT INTO entropy_node_events (event, node_id) VALUES (?, ?)",
+                (event, node_id),
+            )
+            c.commit()
+            return cur.lastrowid
+
+    # --- entropy_credits ---
+    def entropy_credits_get(self, tenant_id: str) -> dict[str, Any] | None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                "SELECT * FROM entropy_credits WHERE tenant_id = ?",
+                (tenant,),
+            ).fetchone()
+            return dict(row) if row else None
+
+    def entropy_credits_earn(self, tenant_id: str, amount: int) -> None:
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            existing = c.execute(
+                "SELECT earned FROM entropy_credits WHERE tenant_id = ?",
+                (tenant,),
+            ).fetchone()
+            if existing:
+                c.execute(
+                    """UPDATE entropy_credits SET earned = earned + ?, last_updated = datetime('now')
+                       WHERE tenant_id = ?""",
+                    (amount, tenant),
+                )
+            else:
+                c.execute(
+                    "INSERT INTO entropy_credits (tenant_id, earned, spent) VALUES (?, ?, 0)",
+                    (tenant, amount),
+                )
+            c.commit()
+
+    def entropy_credits_spend(self, tenant_id: str, amount: int) -> bool:
+        """Debit credits. Returns True if successful, False if insufficient balance."""
+        tenant = (tenant_id or "").strip() or "default"
+        with self._conn() as c:
+            row = c.execute(
+                "SELECT earned, spent FROM entropy_credits WHERE tenant_id = ?",
+                (tenant,),
+            ).fetchone()
+            balance = 0
+            if row:
+                balance = row["earned"] - row["spent"]
+            if balance < amount:
+                return False
+            if row:
+                c.execute(
+                    """UPDATE entropy_credits SET spent = spent + ?, last_updated = datetime('now')
+                       WHERE tenant_id = ?""",
+                    (amount, tenant),
+                )
+            else:
+                return False
+            c.commit()
+            return True
+
     # --- raw SQL for explorer window ---
     def execute_read(self, sql: str, params: tuple[Any, ...] = ()) -> list[dict[str, Any]]:
         """Run read-only SQL; returns list of row dicts."""

@@ -1,0 +1,3957 @@
+{
+  "schema_version": "2.0",
+  "input_path": "C:\\Users\\John\\Drawer 2\\Scripts\\video_storage_tool\\tests\\fixtures\\flight_sim_image_3s.mp4",
+  "input_bytes": 85812,
+  "matrix_dimensions": {
+    "cohorts": [
+      "default_v2",
+      "cairn_residual_v2",
+      "planar_hyperplane_v2",
+      "audio_captioning_v1"
+    ],
+    "script_backend": [
+      "stub",
+      "whisper"
+    ],
+    "t2v_backend": [
+      "stub",
+      "cogvideox"
+    ],
+    "visual_backend": [
+      "blip",
+      "blip2"
+    ],
+    "diff_lossless": [
+      false,
+      true
+    ],
+    "strict_fail": true
+  },
+  "matrix_cardinality": 64,
+  "portfolio": {
+    "runtime": {
+      "run_started_at": "2026-02-21T21:59:15.121666+00:00",
+      "run_finished_at": "2026-02-21T22:19:47.992267+00:00",
+      "total_duration_sec": 1232.8705946999835,
+      "per_cell_duration_sec": {
+        "default_v2|script=stub|t2v=stub|visual=blip|lossless=off": 45.04151120001916,
+        "default_v2|script=stub|t2v=stub|visual=blip|lossless=on": 27.08133740001358,
+        "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off": 3.490164899965748,
+        "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on": 3.3849097000202164,
+        "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": 0.0008043000125326216,
+        "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": 0.0008658000151626766,
+        "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": 0.0006519999587908387,
+        "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": 0.0005053000058978796,
+        "default_v2|script=whisper|t2v=stub|visual=blip|lossless=off": 56.12774069997249,
+        "default_v2|script=whisper|t2v=stub|visual=blip|lossless=on": 46.60554319998482,
+        "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": 100.95680889999494,
+        "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": 6.528429700003471,
+        "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": 0.0012833999935537577,
+        "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": 0.000597700010985136,
+        "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": 0.0006117000011727214,
+        "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": 0.00043399998685345054,
+        "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off": 4.129665700020269,
+        "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on": 3.660396999970544,
+        "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off": 254.1416357999551,
+        "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on": 3.7727197999483906,
+        "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": 0.0007437000167556107,
+        "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": 0.0006290000164881349,
+        "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": 0.0005401999806053936,
+        "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": 0.0004824999487027526,
+        "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=off": 6.7073055999935605,
+        "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=on": 25.484389299992472,
+        "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": 549.6549571999931,
+        "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": 7.004018499981612,
+        "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": 0.0008511999621987343,
+        "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": 0.0005574999959208071,
+        "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": 0.0004741000011563301,
+        "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": 0.0005633000400848687,
+        "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off": 3.4514752000104636,
+        "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on": 3.432951900002081,
+        "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off": 3.6659816000028513,
+        "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on": 4.181920299946796,
+        "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": 0.000581699947360903,
+        "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": 0.0005747000104747713,
+        "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": 0.000965300016105175,
+        "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": 0.0005083000287413597,
+        "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=off": 6.777708699984942,
+        "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=on": 6.54688450001413,
+        "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": 6.9745169000234455,
+        "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": 6.6785653999540955,
+        "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": 0.0008304999792017043,
+        "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": 0.0006136000156402588,
+        "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": 0.0006407000473700464,
+        "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": 0.0005792999872937799,
+        "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off": 5.1038231999846175,
+        "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on": 5.443238800042309,
+        "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off": 4.980964899994433,
+        "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on": 4.8773688999935985,
+        "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=off": 0.0006754999631084502,
+        "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=on": 0.0006165000377222896,
+        "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=off": 0.0006240000366233289,
+        "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=on": 0.00047749996883794665,
+        "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=off": 7.05700569995679,
+        "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=on": 6.740758699947037,
+        "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=off": 7.009486599999946,
+        "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=on": 6.14603189995978,
+        "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=off": 0.0007350000087171793,
+        "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=on": 0.0015938000287860632,
+        "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": 0.0004592000041157007,
+        "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": 0.0006228000274859369
+      }
+    }
+  },
+  "adapter_config_matrix": {
+    "default_v2|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "default_v2|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "default",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "cairn_residual_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "planar_hyperplane_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": true,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": true,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "stub",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "stub",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": false
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "script_backend": "whisper",
+      "t2v_backend": "cogvideox",
+      "visual_backend": "blip2",
+      "pipeline_adapter_set_configured": "audio_captioning_v1",
+      "is_stub_variant": false,
+      "lossless": true
+    }
+  },
+  "matrix_cells": {
+    "default_v2|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m",
+      "stored_total_bytes": 341554,
+      "ratio_total_vs_input": 3.9802591712114856,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T21:59:15.121884+00:00",
+        "run_finished_at": "2026-02-21T22:00:00.163403+00:00",
+        "runtime_duration_sec": 45.04151120001916,
+        "estimated_compute_cost_units": 45.04151120001916,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2878,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t",
+      "stored_total_bytes": 341554,
+      "ratio_total_vs_input": 3.9802591712114856,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:00.163546+00:00",
+        "run_finished_at": "2026-02-21T22:00:27.244891+00:00",
+        "runtime_duration_sec": 27.08133740001358,
+        "estimated_compute_cost_units": 27.08133740001358,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2878,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv",
+      "stored_total_bytes": 341554,
+      "ratio_total_vs_input": 3.9802591712114856,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:27.245040+00:00",
+        "run_finished_at": "2026-02-21T22:00:30.735214+00:00",
+        "runtime_duration_sec": 3.490164899965748,
+        "estimated_compute_cost_units": 3.490164899965748,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2878,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw",
+      "stored_total_bytes": 341554,
+      "ratio_total_vs_input": 3.9802591712114856,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:30.735578+00:00",
+        "run_finished_at": "2026-02-21T22:00:34.120498+00:00",
+        "runtime_duration_sec": 3.3849097000202164,
+        "estimated_compute_cost_units": 3.3849097000202164,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2878,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_bc4bn8m_",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:34.120647+00:00",
+        "run_finished_at": "2026-02-21T22:00:34.121457+00:00",
+        "runtime_duration_sec": 0.0008043000125326216,
+        "estimated_compute_cost_units": 0.00965160015039146,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "default_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8ok152et",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:34.121505+00:00",
+        "run_finished_at": "2026-02-21T22:00:34.122375+00:00",
+        "runtime_duration_sec": 0.0008658000151626766,
+        "estimated_compute_cost_units": 0.010389600181952119,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_d894mtv3",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:34.122418+00:00",
+        "run_finished_at": "2026-02-21T22:00:34.123074+00:00",
+        "runtime_duration_sec": 0.0006519999587908387,
+        "estimated_compute_cost_units": 0.007823999505490065,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\minimization_report.json"
+      }
+    },
+    "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "default_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_x4egckw2",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:34.123133+00:00",
+        "run_finished_at": "2026-02-21T22:00:34.123642+00:00",
+        "runtime_duration_sec": 0.0005053000058978796,
+        "estimated_compute_cost_units": 0.006063600070774555,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "default_v2|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_d78s0_rf",
+      "stored_total_bytes": 363782,
+      "ratio_total_vs_input": 4.239290542115322,
+      "unique_chunk_refs_count": 128,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:00:34.123679+00:00",
+        "run_finished_at": "2026-02-21T22:01:30.251425+00:00",
+        "runtime_duration_sec": 56.12774069997249,
+        "estimated_compute_cost_units": 168.38322209991748,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 23405,
+        "resultant.mp4": 12755,
+        "script.txt": 1840
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "default_v2|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_oquahpzf",
+      "stored_total_bytes": 363782,
+      "ratio_total_vs_input": 4.239290542115322,
+      "unique_chunk_refs_count": 128,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:01:30.251596+00:00",
+        "run_finished_at": "2026-02-21T22:02:16.857147+00:00",
+        "runtime_duration_sec": 46.60554319998482,
+        "estimated_compute_cost_units": 139.81662959995447,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 23405,
+        "resultant.mp4": 12755,
+        "script.txt": 1840
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_s329cus9",
+      "stored_total_bytes": 358099,
+      "ratio_total_vs_input": 4.173064373281126,
+      "unique_chunk_refs_count": 105,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:02:16.857337+00:00",
+        "run_finished_at": "2026-02-21T22:03:57.814153+00:00",
+        "runtime_duration_sec": 100.95680889999494,
+        "estimated_compute_cost_units": 302.8704266999848,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 18984,
+        "resultant.mp4": 12755,
+        "script.txt": 578
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_5fyvqi9z",
+      "stored_total_bytes": 341372,
+      "ratio_total_vs_input": 3.9781382557218103,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "default",
+      "adapter_requirements": {
+        "adapter_id": "default",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:03:57.814330+00:00",
+        "run_finished_at": "2026-02-21T22:04:04.342768+00:00",
+        "runtime_duration_sec": 6.528429700003471,
+        "estimated_compute_cost_units": 19.585289100010414,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2704,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_tjqkdfor",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:04.343006+00:00",
+        "run_finished_at": "2026-02-21T22:04:04.344297+00:00",
+        "runtime_duration_sec": 0.0012833999935537577,
+        "estimated_compute_cost_units": 0.046202399767935276,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "default_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_75yo8vq_",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:04.344340+00:00",
+        "run_finished_at": "2026-02-21T22:04:04.344941+00:00",
+        "runtime_duration_sec": 0.000597700010985136,
+        "estimated_compute_cost_units": 0.021517200395464897,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_nejt616y",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:04.344981+00:00",
+        "run_finished_at": "2026-02-21T22:04:04.345597+00:00",
+        "runtime_duration_sec": 0.0006117000011727214,
+        "estimated_compute_cost_units": 0.02202120004221797,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\minimization_report.json"
+      }
+    },
+    "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "default_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "default_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6d47jisd",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:04.345633+00:00",
+        "run_finished_at": "2026-02-21T22:04:04.346070+00:00",
+        "runtime_duration_sec": 0.00043399998685345054,
+        "estimated_compute_cost_units": 0.01562399952672422,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:04.346104+00:00",
+        "run_finished_at": "2026-02-21T22:04:08.475775+00:00",
+        "runtime_duration_sec": 4.129665700020269,
+        "estimated_compute_cost_units": 4.129665700020269,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:08.475980+00:00",
+        "run_finished_at": "2026-02-21T22:04:12.136384+00:00",
+        "runtime_duration_sec": 3.660396999970544,
+        "estimated_compute_cost_units": 3.660396999970544,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:04:12.136553+00:00",
+        "run_finished_at": "2026-02-21T22:08:26.278195+00:00",
+        "runtime_duration_sec": 254.1416357999551,
+        "estimated_compute_cost_units": 254.1416357999551,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:26.278356+00:00",
+        "run_finished_at": "2026-02-21T22:08:30.051083+00:00",
+        "runtime_duration_sec": 3.7727197999483906,
+        "estimated_compute_cost_units": 3.7727197999483906,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_zgrqcbz9",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:30.051277+00:00",
+        "run_finished_at": "2026-02-21T22:08:30.052027+00:00",
+        "runtime_duration_sec": 0.0007437000167556107,
+        "estimated_compute_cost_units": 0.008924400201067328,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_trtksap7",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:30.052079+00:00",
+        "run_finished_at": "2026-02-21T22:08:30.052712+00:00",
+        "runtime_duration_sec": 0.0006290000164881349,
+        "estimated_compute_cost_units": 0.007548000197857618,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f2wm3cz6",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:30.052762+00:00",
+        "run_finished_at": "2026-02-21T22:08:30.053306+00:00",
+        "runtime_duration_sec": 0.0005401999806053936,
+        "estimated_compute_cost_units": 0.006482399767264724,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_smd14imp",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:30.053346+00:00",
+        "run_finished_at": "2026-02-21T22:08:30.053832+00:00",
+        "runtime_duration_sec": 0.0004824999487027526,
+        "estimated_compute_cost_units": 0.005789999384433031,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_oxfm9bmu",
+      "stored_total_bytes": 341575,
+      "ratio_total_vs_input": 3.980503892229525,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:30.053873+00:00",
+        "run_finished_at": "2026-02-21T22:08:36.761185+00:00",
+        "runtime_duration_sec": 6.7073055999935605,
+        "estimated_compute_cost_units": 20.12191679998068,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2731,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_evgwzgtv",
+      "stored_total_bytes": 363543,
+      "ratio_total_vs_input": 4.236505383862397,
+      "unique_chunk_refs_count": 128,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:08:36.761488+00:00",
+        "run_finished_at": "2026-02-21T22:09:02.245891+00:00",
+        "runtime_duration_sec": 25.484389299992472,
+        "estimated_compute_cost_units": 76.45316789997742,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 23437,
+        "resultant.mp4": 12755,
+        "script.txt": 1393
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4z3lvwfn",
+      "stored_total_bytes": 358302,
+      "ratio_total_vs_input": 4.17543000978884,
+      "unique_chunk_refs_count": 105,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:09:02.246219+00:00",
+        "run_finished_at": "2026-02-21T22:18:11.901187+00:00",
+        "runtime_duration_sec": 549.6549571999931,
+        "estimated_compute_cost_units": 1648.9648715999792,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 19011,
+        "resultant.mp4": 12755,
+        "script.txt": 578
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_464purop",
+      "stored_total_bytes": 341575,
+      "ratio_total_vs_input": 3.980503892229525,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "cairn_residual_v1",
+      "adapter_requirements": {
+        "adapter_id": "cairn_residual_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "cairn_audio_v1"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:11.901356+00:00",
+        "run_finished_at": "2026-02-21T22:18:18.905382+00:00",
+        "runtime_duration_sec": 7.004018499981612,
+        "estimated_compute_cost_units": 21.012055499944836,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2731,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_p951lx62",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:18.905532+00:00",
+        "run_finished_at": "2026-02-21T22:18:18.906389+00:00",
+        "runtime_duration_sec": 0.0008511999621987343,
+        "estimated_compute_cost_units": 0.030643198639154434,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_asncxfkg",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:18.906436+00:00",
+        "run_finished_at": "2026-02-21T22:18:18.906997+00:00",
+        "runtime_duration_sec": 0.0005574999959208071,
+        "estimated_compute_cost_units": 0.020069999853149056,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ti6mdmc5",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:18.907041+00:00",
+        "run_finished_at": "2026-02-21T22:18:18.907518+00:00",
+        "runtime_duration_sec": 0.0004741000011563301,
+        "estimated_compute_cost_units": 0.017067600041627884,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\minimization_report.json"
+      }
+    },
+    "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "cairn_residual_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "cairn_residual_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9rar7aql",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:18.907554+00:00",
+        "run_finished_at": "2026-02-21T22:18:18.908121+00:00",
+        "runtime_duration_sec": 0.0005633000400848687,
+        "estimated_compute_cost_units": 0.020278801443055272,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:18.908159+00:00",
+        "run_finished_at": "2026-02-21T22:18:22.359640+00:00",
+        "runtime_duration_sec": 3.4514752000104636,
+        "estimated_compute_cost_units": 3.4514752000104636,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:22.359808+00:00",
+        "run_finished_at": "2026-02-21T22:18:25.792767+00:00",
+        "runtime_duration_sec": 3.432951900002081,
+        "estimated_compute_cost_units": 3.432951900002081,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:25.792940+00:00",
+        "run_finished_at": "2026-02-21T22:18:29.458929+00:00",
+        "runtime_duration_sec": 3.6659816000028513,
+        "estimated_compute_cost_units": 3.6659816000028513,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2",
+      "stored_total_bytes": 341757,
+      "ratio_total_vs_input": 3.9826248077192,
+      "unique_chunk_refs_count": 13,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:29.459113+00:00",
+        "run_finished_at": "2026-02-21T22:18:33.641040+00:00",
+        "runtime_duration_sec": 4.181920299946796,
+        "estimated_compute_cost_units": 4.181920299946796,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2905,
+        "resultant.mp4": 12755,
+        "script.txt": 139
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_vflvlkb1",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:33.641201+00:00",
+        "run_finished_at": "2026-02-21T22:18:33.641787+00:00",
+        "runtime_duration_sec": 0.000581699947360903,
+        "estimated_compute_cost_units": 0.006980399368330836,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_113_5p3t",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:33.641830+00:00",
+        "run_finished_at": "2026-02-21T22:18:33.642409+00:00",
+        "runtime_duration_sec": 0.0005747000104747713,
+        "estimated_compute_cost_units": 0.006896400125697255,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g679237k",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:33.642450+00:00",
+        "run_finished_at": "2026-02-21T22:18:33.643419+00:00",
+        "runtime_duration_sec": 0.000965300016105175,
+        "estimated_compute_cost_units": 0.0115836001932621,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=stub|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_igqjlm6i",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:33.643458+00:00",
+        "run_finished_at": "2026-02-21T22:18:33.643970+00:00",
+        "runtime_duration_sec": 0.0005083000287413597,
+        "estimated_compute_cost_units": 0.0060996003448963165,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_lu73j6oe",
+      "stored_total_bytes": 341575,
+      "ratio_total_vs_input": 3.980503892229525,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:33.644012+00:00",
+        "run_finished_at": "2026-02-21T22:18:40.421727+00:00",
+        "runtime_duration_sec": 6.777708699984942,
+        "estimated_compute_cost_units": 20.333126099954825,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2731,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_z0kzzlp2",
+      "stored_total_bytes": 341575,
+      "ratio_total_vs_input": 3.980503892229525,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:40.421899+00:00",
+        "run_finished_at": "2026-02-21T22:18:46.968789+00:00",
+        "runtime_duration_sec": 6.54688450001413,
+        "estimated_compute_cost_units": 19.64065350004239,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2731,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_o7q5l3sn",
+      "stored_total_bytes": 341575,
+      "ratio_total_vs_input": 3.980503892229525,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:46.968963+00:00",
+        "run_finished_at": "2026-02-21T22:18:53.943486+00:00",
+        "runtime_duration_sec": 6.9745169000234455,
+        "estimated_compute_cost_units": 20.923550700070336,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2731,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ww0sf113",
+      "stored_total_bytes": 341575,
+      "ratio_total_vs_input": 3.980503892229525,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "planar_hyperplane_v1",
+      "adapter_requirements": {
+        "adapter_id": "planar_hyperplane_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:18:53.943649+00:00",
+        "run_finished_at": "2026-02-21T22:19:00.622221+00:00",
+        "runtime_duration_sec": 6.6785653999540955,
+        "estimated_compute_cost_units": 20.035696199862286,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2731,
+        "resultant.mp4": 12755,
+        "script.txt": 131
+      },
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_rwxub5oe",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:00.622399+00:00",
+        "run_finished_at": "2026-02-21T22:19:00.623237+00:00",
+        "runtime_duration_sec": 0.0008304999792017043,
+        "estimated_compute_cost_units": 0.029897999251261353,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_mzxvp_tj",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:00.623288+00:00",
+        "run_finished_at": "2026-02-21T22:19:00.623906+00:00",
+        "runtime_duration_sec": 0.0006136000156402588,
+        "estimated_compute_cost_units": 0.022089600563049316,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_xo4z1qa_",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:00.623949+00:00",
+        "run_finished_at": "2026-02-21T22:19:00.624594+00:00",
+        "runtime_duration_sec": 0.0006407000473700464,
+        "estimated_compute_cost_units": 0.02306520170532167,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\minimization_report.json"
+      }
+    },
+    "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "planar_hyperplane_v2|script=whisper|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "planar_hyperplane_v2",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_3klepfsw",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:00.624642+00:00",
+        "run_finished_at": "2026-02-21T22:19:00.625226+00:00",
+        "runtime_duration_sec": 0.0005792999872937799,
+        "estimated_compute_cost_units": 0.020854799542576075,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il",
+      "stored_total_bytes": 343241,
+      "ratio_total_vs_input": 3.99991842632732,
+      "unique_chunk_refs_count": 21,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:00.625271+00:00",
+        "run_finished_at": "2026-02-21T22:19:05.729100+00:00",
+        "runtime_duration_sec": 5.1038231999846175,
+        "estimated_compute_cost_units": 5.1038231999846175,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 4301,
+        "resultant.mp4": 12755,
+        "script.txt": 227
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm",
+      "stored_total_bytes": 343241,
+      "ratio_total_vs_input": 3.99991842632732,
+      "unique_chunk_refs_count": 21,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:05.729303+00:00",
+        "run_finished_at": "2026-02-21T22:19:11.172549+00:00",
+        "runtime_duration_sec": 5.443238800042309,
+        "estimated_compute_cost_units": 5.443238800042309,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 4301,
+        "resultant.mp4": 12755,
+        "script.txt": 227
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0",
+      "stored_total_bytes": 343241,
+      "ratio_total_vs_input": 3.99991842632732,
+      "unique_chunk_refs_count": 21,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:11.172721+00:00",
+        "run_finished_at": "2026-02-21T22:19:16.153693+00:00",
+        "runtime_duration_sec": 4.980964899994433,
+        "estimated_compute_cost_units": 4.980964899994433,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 4301,
+        "resultant.mp4": 12755,
+        "script.txt": 227
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt",
+      "stored_total_bytes": 343241,
+      "ratio_total_vs_input": 3.99991842632732,
+      "unique_chunk_refs_count": 21,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:16.153852+00:00",
+        "run_finished_at": "2026-02-21T22:19:21.031228+00:00",
+        "runtime_duration_sec": 4.8773688999935985,
+        "estimated_compute_cost_units": 4.8773688999935985,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 4301,
+        "resultant.mp4": 12755,
+        "script.txt": 227
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_0ovdv4zg",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:21.031404+00:00",
+        "run_finished_at": "2026-02-21T22:19:21.032085+00:00",
+        "runtime_duration_sec": 0.0006754999631084502,
+        "estimated_compute_cost_units": 0.008105999557301402,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_mvzhe0x9",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:21.032134+00:00",
+        "run_finished_at": "2026-02-21T22:19:21.032754+00:00",
+        "runtime_duration_sec": 0.0006165000377222896,
+        "estimated_compute_cost_units": 0.007398000452667475,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_v11hn1cd",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:21.032800+00:00",
+        "run_finished_at": "2026-02-21T22:19:21.033428+00:00",
+        "runtime_duration_sec": 0.0006240000366233289,
+        "estimated_compute_cost_units": 0.007488000439479947,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=stub|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "stub",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_qb__4dlf",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:21.033468+00:00",
+        "run_finished_at": "2026-02-21T22:19:21.033949+00:00",
+        "runtime_duration_sec": 0.00047749996883794665,
+        "estimated_compute_cost_units": 0.00572999962605536,
+        "cost_basis": {
+          "script_backend": "stub",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_1o8yvlss",
+      "stored_total_bytes": 341563,
+      "ratio_total_vs_input": 3.980364051647788,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:21.033990+00:00",
+        "run_finished_at": "2026-02-21T22:19:28.091002+00:00",
+        "runtime_duration_sec": 7.05700569995679,
+        "estimated_compute_cost_units": 21.17101709987037,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2728,
+        "resultant.mp4": 12755,
+        "script.txt": 122
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_zavzv6rq",
+      "stored_total_bytes": 341563,
+      "ratio_total_vs_input": 3.980364051647788,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:28.091175+00:00",
+        "run_finished_at": "2026-02-21T22:19:34.831942+00:00",
+        "runtime_duration_sec": 6.740758699947037,
+        "estimated_compute_cost_units": 20.22227609984111,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2728,
+        "resultant.mp4": 12755,
+        "script.txt": 122
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ekc5nobb",
+      "stored_total_bytes": 341563,
+      "ratio_total_vs_input": 3.980364051647788,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:34.832116+00:00",
+        "run_finished_at": "2026-02-21T22:19:41.841611+00:00",
+        "runtime_duration_sec": 7.009486599999946,
+        "estimated_compute_cost_units": 21.028459799999837,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2728,
+        "resultant.mp4": 12755,
+        "script.txt": 122
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "stub",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "ok",
+      "failure_reason": null,
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9o3y2pj4",
+      "stored_total_bytes": 341563,
+      "ratio_total_vs_input": 3.980364051647788,
+      "unique_chunk_refs_count": 12,
+      "coverage": {
+        "transcript_present": 1.0,
+        "audio_effects_present": 1.0
+      },
+      "adapter_set_effective": "audio_captioning_v1",
+      "adapter_requirements": {
+        "adapter_id": "audio_captioning_v1",
+        "is_ready": true,
+        "missing": {
+          "packages": [],
+          "binaries": [],
+          "artifacts": []
+        },
+        "runtime_fallback_adapter": "default"
+      },
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:41.841846+00:00",
+        "run_finished_at": "2026-02-21T22:19:47.987886+00:00",
+        "runtime_duration_sec": 6.14603189995978,
+        "estimated_compute_cost_units": 18.43809569987934,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "stub"
+        }
+      },
+      "files": {
+        "audio.aac": 1720,
+        "audio.cairn.residual.bin": 21,
+        "audio.cairn.residual.meta.json": 155,
+        "diff.ogv": 324062,
+        "minimization_report.json": 2728,
+        "resultant.mp4": 12755,
+        "script.txt": 122
+      },
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ukdohkjo",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:47.988057+00:00",
+        "run_finished_at": "2026-02-21T22:19:47.988797+00:00",
+        "runtime_duration_sec": 0.0007350000087171793,
+        "estimated_compute_cost_units": 0.026460000313818455,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_k6ja0nzy",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:47.988845+00:00",
+        "run_finished_at": "2026-02-21T22:19:47.990442+00:00",
+        "runtime_duration_sec": 0.0015938000287860632,
+        "estimated_compute_cost_units": 0.057376801036298275,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=off": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=off",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": false
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_elj96otx",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:47.990481+00:00",
+        "run_finished_at": "2026-02-21T22:19:47.990943+00:00",
+        "runtime_duration_sec": 0.0004592000041157007,
+        "estimated_compute_cost_units": 0.016531200148165226,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\minimization_report.json"
+      }
+    },
+    "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=on": {
+      "matrix_key": "audio_captioning_v1|script=whisper|t2v=cogvideox|visual=blip2|lossless=on",
+      "matrix": {
+        "cohort": "audio_captioning_v1",
+        "script_backend": "whisper",
+        "t2v_backend": "cogvideox",
+        "visual_backend": "blip2",
+        "lossless": true
+      },
+      "execution_status": "failed",
+      "failure_reason": "t2v backend cogvideox unavailable (model_id/model_path not configured)",
+      "out_dir": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_jepf3ib2",
+      "stored_total_bytes": 0,
+      "ratio_total_vs_input": 0.0,
+      "unique_chunk_refs_count": 0,
+      "coverage": {
+        "transcript_present": 0.0,
+        "audio_effects_present": 0.0
+      },
+      "adapter_set_effective": null,
+      "adapter_requirements": {},
+      "runtime": {
+        "run_started_at": "2026-02-21T22:19:47.990977+00:00",
+        "run_finished_at": "2026-02-21T22:19:47.991603+00:00",
+        "runtime_duration_sec": 0.0006228000274859369,
+        "estimated_compute_cost_units": 0.022420800989493728,
+        "cost_basis": {
+          "script_backend": "whisper",
+          "t2v_backend": "cogvideox"
+        }
+      },
+      "files": {},
+      "links": {
+        "closest_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+        "closest_stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\resultant.mp4",
+        "closest_stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\minimization_report.json"
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "from_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.2590313709038363,
+      "delta_runtime_sec": 11.086229499953333,
+      "delta_ref_count": 115,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_wh9m100m\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.2590313709038363,
+      "delta_runtime_sec": 19.52420579997124,
+      "delta_ref_count": 115,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_4yiw3v5t\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.19280520206964047,
+      "delta_runtime_sec": 97.46664400002919,
+      "delta_ref_count": 92,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ei0uoelv\\minimization_report.json"
+    },
+    {
+      "from_cohort": "default_v2|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "default_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": -0.0021209154896753013,
+      "delta_runtime_sec": 3.143519999983255,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_2lu04bmw\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": -0.002120915489674857,
+      "delta_runtime_sec": 2.577639899973292,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ky1n9t0e\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.25388057614319726,
+      "delta_runtime_sec": 21.823992300021928,
+      "delta_ref_count": 115,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_r0g86cih\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.19280520206964047,
+      "delta_runtime_sec": 295.51332140003797,
+      "delta_ref_count": 92,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ortokwzg\\minimization_report.json"
+    },
+    {
+      "from_cohort": "cairn_residual_v2|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "cairn_residual_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": -0.002120915489674857,
+      "delta_runtime_sec": 3.2312987000332214,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_8xexya3w\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": -0.002120915489674857,
+      "delta_runtime_sec": 3.326233499974478,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_7utn19xk\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": -0.002120915489674857,
+      "delta_runtime_sec": 3.113932600012049,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_g8k2ihuh\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": -0.002120915489674857,
+      "delta_runtime_sec": 3.308535300020594,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_f9xbjw0l\\minimization_report.json"
+    },
+    {
+      "from_cohort": "planar_hyperplane_v2|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "planar_hyperplane_v2|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": -0.002120915489674857,
+      "delta_runtime_sec": 2.4966451000072993,
+      "delta_ref_count": -1,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_33e3mjf2\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": 0.0,
+      "delta_runtime_sec": 0.0,
+      "delta_ref_count": 0,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=off",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": -0.019554374679532138,
+      "delta_runtime_sec": 1.953182499972172,
+      "delta_ref_count": -9,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_ktxmg2il\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip|lossless=on",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": -0.019554374679532138,
+      "delta_runtime_sec": 1.297519899904728,
+      "delta_ref_count": -9,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_6ntj92pm\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=off",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=off",
+      "relation": "closest_stub",
+      "delta_ratio": -0.019554374679532138,
+      "delta_runtime_sec": 2.0285217000055127,
+      "delta_ref_count": -9,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_il2b_8o0\\minimization_report.json"
+    },
+    {
+      "from_cohort": "audio_captioning_v1|script=whisper|t2v=stub|visual=blip2|lossless=on",
+      "to_stub_cohort": "audio_captioning_v1|script=stub|t2v=stub|visual=blip2|lossless=on",
+      "relation": "closest_stub",
+      "delta_ratio": -0.019554374679532138,
+      "delta_runtime_sec": 1.2686629999661818,
+      "delta_ref_count": -9,
+      "stub_result_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\resultant.mp4",
+      "stub_report_path": "C:\\Users\\John\\AppData\\Local\\Temp\\v2_matrix_9m4ricvt\\minimization_report.json"
+    }
+  ],
+  "matrix_stats": {
+    "success_count": 32,
+    "failure_count": 32
+  },
+  "matrix_rollups": {
+    "by_script_backend": {
+      "stub": {
+        "count": 32.0,
+        "avg_runtime_sec": 11.87032226874544,
+        "sum_cost_units": 379.9630218994571
+      },
+      "whisper": {
+        "count": 32.0,
+        "avg_runtime_sec": 26.656612478120223,
+        "sum_cost_units": 2559.412575302529
+      }
+    },
+    "by_t2v_backend": {
+      "stub": {
+        "count": 32.0,
+        "avg_runtime_sec": 38.52625680623896,
+        "sum_cost_units": 2938.84052079916
+      },
+      "cogvideox": {
+        "count": 32.0,
+        "avg_runtime_sec": 0.0006779406267014565,
+        "sum_cost_units": 0.5350764028262347
+      }
+    },
+    "by_visual_backend": {
+      "blip": {
+        "count": 32.0,
+        "avg_runtime_sec": 8.106384084372621,
+        "sum_cost_units": 583.8065611996572
+      },
+      "blip2": {
+        "count": 32.0,
+        "avg_runtime_sec": 30.420550662493042,
+        "sum_cost_units": 2355.569036002329
+      }
+    },
+    "by_lossless": {
+      "False": {
+        "count": 32.0,
+        "avg_runtime_sec": 33.29006954061879,
+        "sum_cost_units": 2548.0807425988023
+      },
+      "True": {
+        "count": 32.0,
+        "avg_runtime_sec": 5.2368652062468755,
+        "sum_cost_units": 391.2948546031839
+      }
+    }
+  },
+  "json_path": "C:\\Users\\John\\unified-semantic-compressor\\docs\\v2_cohort_report.json"
+}

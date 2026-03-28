@@ -2,6 +2,7 @@
 Smoke tests for USC library_document_* API (insert and search with tenant_id).
 """
 import tempfile
+import time
 from pathlib import Path
 
 import pytest
@@ -17,7 +18,13 @@ def temp_db():
     init_schema(conn)
     conn.close()
     yield path
-    Path(path).unlink(missing_ok=True)
+    db_path = Path(path)
+    for _ in range(5):
+        try:
+            db_path.unlink(missing_ok=True)
+            break
+        except PermissionError:
+            time.sleep(0.05)
 
 
 def test_library_document_insert_and_search(temp_db):

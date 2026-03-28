@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 import importlib.util
 import hashlib
 import json
+import subprocess
 import time
 from pathlib import Path
 
@@ -227,6 +228,9 @@ def _build_matrix_cells(
     whisper_model: Path,
     audio_caption_model: Path,
     visual_grid: int,
+    num_frames: int,
+    fps: int,
+    resultant_duration_sec: float | None,
 ) -> list[tuple[str, dict, dict]]:
     script_backends = ["stub", "whisper"]
     t2v_backends = ["stub", "cogvideox"]
@@ -264,8 +268,13 @@ def _build_matrix_cells(
                                     "backend": t2v_backend,
                                     "model_path": str(cogvideo_model) if t2v_backend in ("cogvideox", "cogvideo") else None,
                                     "num_inference_steps": 2,
-                                    "num_frames": 8,
-                                    "fps": 4,
+                                    "num_frames": int(max(1, num_frames)),
+                                    "fps": int(max(1, fps)),
+                                    "duration_sec": (
+                                        float(resultant_duration_sec)
+                                        if (resultant_duration_sec and t2v_backend in ("cogvideox", "cogvideo"))
+                                        else None
+                                    ),
                                     "guidance_scale": 4.0,
                                 },
                                 "diff": {"lossless": bool(lossless), "enabled": True},
@@ -298,6 +307,30 @@ def _rollup(values: dict[str, list[tuple[float, float]]]) -> dict[str, dict[str,
     return out
 
 
+def _probe_duration_seconds(path: Path, ffprobe_dir: Path) -> float:
+    ffprobe = ffprobe_dir / "ffprobe.exe"
+    try:
+        proc = subprocess.run(
+            [
+                str(ffprobe),
+                "-v",
+                "error",
+                "-show_entries",
+                "format=duration",
+                "-of",
+                "default=noprint_wrappers=1:nokey=1",
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=20,
+            check=True,
+        )
+        return float((proc.stdout or "").strip() or 0.0)
+    except Exception:
+        return 0.0
+
+
 def _cell_out_dir(results_root: Path | None, matrix_key: str, index: int) -> Path:
     if results_root is None:
         import tempfile
@@ -316,6 +349,9 @@ def run(
     models_dir: Path | None = None,
     blip2_model_id: str | None = None,
     visual_grid: int = 2,
+    num_frames: int = 8,
+    fps: int = 4,
+    target_resultant_to_audio: bool = False,
 ) -> dict:
     base_cohorts = {
         "default_v2": {
@@ -373,6 +409,12 @@ def run(
     t0 = time.perf_counter()
     md = models_dir if models_dir is not None else _default_models_dir()
     ffmpeg_dir, blip_model, blip2_model, cogvideo_model, whisper_model, audio_caption_model = _resolve_model_paths(md)
+    ffprobe_dir = ffmpeg_dir
+    resultant_duration_sec: float | None = None
+    if target_resultant_to_audio:
+        probed = _probe_duration_seconds(input_path, ffprobe_dir=ffprobe_dir)
+        if probed > 0:
+            resultant_duration_sec = probed
     blip2_model_ref = str(blip2_model)
     if blip2_model_id:
         blip2_model_ref = blip2_model_id
@@ -388,6 +430,9 @@ def run(
         whisper_model=whisper_model,
         audio_caption_model=audio_caption_model,
         visual_grid=visual_grid,
+        num_frames=num_frames,
+        fps=fps,
+        resultant_duration_sec=resultant_duration_sec,
     )
     report = {
         "schema_version": "2.0",
@@ -399,6 +444,9 @@ def run(
             "t2v_backend": ["stub", "cogvideox"],
             "visual_backend": ["blip", "blip2"],
             "visual_grid": [int(visual_grid)],
+            "num_frames": [int(max(1, num_frames))],
+            "fps": [int(max(1, fps))],
+            "target_resultant_to_audio": [bool(target_resultant_to_audio)],
             "diff_lossless": [False, True],
             "strict_fail": True,
         },
@@ -575,6 +623,13 @@ def main() -> int:
         default=None,
         help="Directory containing ffmpeg, blip, blip2, CogVideoX, whisper-base, openai-whisper-base (default: C:\\Users\\John\\Downloads)",
     )
+    p.add_argument("--num-frames", type=int, default=8, help="T2V generation frame count per matrix cell.")
+    p.add_argument("--fps", type=int, default=4, help="T2V generation fps per matrix cell.")
+    p.add_argument(
+        "--target-resultant-to-audio",
+        action="store_true",
+        help="For non-stub T2V backends, set t2v.duration_sec to input clip duration for diagnostic runs.",
+    )
     args = p.parse_args()
     if args.results_root is not None:
         args.results_root.mkdir(parents=True, exist_ok=True)
@@ -584,6 +639,9 @@ def main() -> int:
         models_dir=args.models_dir,
         blip2_model_id=args.blip2_model_id,
         visual_grid=max(1, min(3, int(args.visual_grid))),
+        num_frames=max(1, int(args.num_frames)),
+        fps=max(1, int(args.fps)),
+        target_resultant_to_audio=bool(args.target_resultant_to_audio),
     )
     report["json_path"] = str(args.out)
     args.out.write_text(json.dumps(report, indent=2), encoding="utf-8")

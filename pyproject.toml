@@ -9,12 +9,23 @@ description = "Flowering ring of semantic compressors (video, audio, library, da
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "luigi>=3.7.0",
+    "luigi>=3.6.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0.0"]
 
+[project.scripts]
+usc-query-db = "unified_semantic_archiver.cli.query_db:main"
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["unified_semantic_archiver*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests as integration tests (slow, require models/ffmpeg)",
+]
+# Test reports: pytest writes to stdout by default. For XML/HTML:
+#   pytest --junitxml=test-results/junit.xml
+#   pytest --html=test-results/report.html (requires pytest-html)
